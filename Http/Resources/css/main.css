@@ -1,0 +1,194 @@
+@CHARSET "UTF-8";
+
+/* Current color palette includes the following hex codes:
+    
+    #de5842 (red)
+    #fcd059 (yellow)
+    #ededea (grey)
+    #bfe1bf (light green)
+    #a2d7d8 (light blue)
+    
+    Second color palette:
+    #022648 (muted blue)
+    #791436 (muted red)
+    #E0C389 (light gold)
+    #D3AB58 (dark gold)
+    #F2E5D2 (cream)
+
+    Background Logo (gray): #92938d
+    Background Logo (blue): #273274
+    Corey’s Red (red): #d9230f
+*/
+
+html, body {
+  /* Margin bottom by footer height */
+  height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 57px; 
+    overflow: hidden;
+    /*background-image: url("/images/background.jpg");
+    background-image: url("/images/logo_pattern_3.png");
+    background-repeat: repeat;*/
+    background-color: #F2E5D2;
+}
+
+.main_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.main_sidebar {
+    
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
+  /* Set the fixed height of the footer here */
+  height: 57px;
+  background-color: #fcfcfc;
+  border-color: #eeeeee;
+  text-align: center;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+#topnavbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.active {
+    font-weight: 900;
+}
+
+/* Deals with all the main panels / pages */
+
+
+/* In order to override the bootcamp CSS, we need to use the h3.* selectors. */
+.panel-default>.panel-heading {
+    /* Uncomment to remove border between title and body; not actually working */
+    padding:0px;
+}
+
+.panel{
+    border:0;
+}
+
+h3.panel-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    
+    /* Red Panel Heading
+    color: #d9230f;
+    border-bottom: #d9230f solid 3px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    background: #eeeeee;
+    border-radius: 3px;
+    padding: 5px;
+    */
+   
+    /* Blue Panel Heading*/
+    color: white;
+    background-color: #022648;
+    padding: 5px;
+    border-radius: 3px;
+    border-bottom: 3px #D3AB58 solid;
+    padding-bottom: 10px;
+}
+
+/* Choose between these two designs for panel subheadings. Or use both if necessary. */
+/* OPTION 1 */
+.mc_subhead_1 {
+    font-weight: 900;
+    border-left: 20px solid #791436;
+    padding-left: 20px;
+}
+
+/* OPTION 2 
+ * White Text with Blue Background and Yellow Border*/
+.mc_subhead_2 {
+    font-weight: 900;
+    color: white;
+    background-color: #022648;
+    padding: 5px;
+    border-radius: 2px;
+    border-bottom: 3px #D3AB58 solid;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* OPTION 3 
+ * This is blue text with a gold unerline */
+.mc_subhead_3 {
+    font-weight: 900;
+    color: #022648;
+    padding: 5px;
+    border-radius: 2px;
+    border-bottom: 3px #D3AB58 solid;
+    padding-bottom: 10px;
+}
+
+/* OPTION 4
+ * The Black Uppercase with Red Underline */
+.mc_subhead_4 {
+    font-weight: 900;
+    /*color: #791436;*/
+    border-bottom: #791436 solid 3px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding: 5px;
+    /*text-transform: uppercase;*/
+}
+
+.mc_redvariant {
+    background: #791436;
+    text-align: center;
+}
+
+/* Custom CSS to bold and color select text. You can change the name later */
+.important_text {
+    color: #791436;
+    font-weight: 900;
+}
+
+#help_us {
+    background: #791436;
+    text-align: center;
+}
+
+/* Images | Image Subtitles */
+img.img-thumbnail {
+    border-radius: 3px;
+    border: 2px #D3AB58 solid;
+}
+
+.img_subtitle {
+    text-align: center;
+    font-weight: 900;
+}
+
+#side_news {
+    min-height: 417px;
+}
+
+.img_photoGallery {
+    max-width: 24%;
+}

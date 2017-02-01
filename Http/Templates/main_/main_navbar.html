@@ -1,0 +1,41 @@
+<!-- Nav Bar -->
+<!-- <nav class="navbar navbar-default" id="topnavbar"> -->
+<nav class="navbar navbar-default navbar-fixed-top" id="topnavbar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javaScript:void(0);" onclick="setContent('Static', 'page_');">Canonsburg</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li {% if PATH == "/" %}class="active"{% endif  %} id="page_"><a href="javaScript:void(0);" onclick="setContent('Static', 'page_');">Home</a></li>
+        <li {% if PATH == "/FirePrevention" %}class="active"{% endif  %} id="page_FirePrevention" onclick="setContent('Static/FirePrevention', 'page_FirePrevention');"><a href="javaScript:void(0);">Fire Prevention</a></li>
+        <li {% if PATH == "/JoinUs" %}class="active"{% endif  %} id="page_JoinUs" onclick="setContent('Static/JoinUs', 'page_JoinUs');"><a href="javaScript:void(0);">Join Us</a></li>
+        <li {% if PATH == "/Personnel" %}class="active"{% endif  %} id="page_Personnel" onclick="setContent('Static/Personnel', 'page_Personnel');"><a href="javaScript:void(0);">Personnel</a></li>
+        <li {% if PATH == "/Apparatus" %}class="active"{% endif  %} id="page_Apparatus" onclick="setContent('Static/Apparatus', 'page_Apparatus');"><a href="javaScript:void(0);">Apparatus</a></li>
+        <li {% if PATH == "/History" %}class="active"{% endif  %} id="page_History" onclick="setContent('Static/History', 'page_History');"><a href="javaScript:void(0);">History</a></li>
+        <li {% if PATH == "/Community" %}class="active"{% endif  %} id="page_Community" onclick="setContent('Static/Community', 'page_Community');"><a href="javaScript:void(0);">Community</a></li>
+        <li {% if PATH == "/PhotoGallery" %}class="active"{% endif  %} id="page_PhotoGallery" onclick="setContent('Static/PhotoGallery', 'page_PhotoGallery');"><a href="javaScript:void(0);">Photo Gallery</a></li>
+        <li {% if PATH == "/ContactUs" %}class="active"{% endif  %} id="page_ContactUs" onclick="setContent('Static/ContactUs', 'page_ContactUs');"><a href="javaScript:void(0);">Contact Us</a></li>
+       </ul>
+       
+       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Members <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="http://mail.canonsburgvfd.org" target="_blank">E-Mail Login</a></li>
+          </ul>
+        </li>
+       </ul>
+     </div><!-- /.navbar-collapse -->
+   </div><!-- /.container-fluid -->
+</nav>
+<!-- End Nav Bar -->

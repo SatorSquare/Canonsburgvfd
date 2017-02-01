@@ -1,0 +1,25 @@
+{% autoescape true %}
+<center>
+    <a href="images/hd-Contact-Canonsburg-Fire-Department.jpg" data-gallery>
+        <img src="images/hd-Contact-Canonsburg-Fire-Department.jpg" alt="Logo" class="img-responsive img-thumbnail">
+    </a>
+</center><br />
+<div class="panel panel-default">
+     <div class="panel-heading">
+        <h3 class="panel-title">Contact Us</h3>
+     </div>
+     <div class="panel-body">
+        <div style="float:left; text-align: center;">
+            <h4 class="mc_subhead_4">We Care About Your Opinion</h4>
+            <p>
+                <strong>For Emergencies Dial 911</strong><br />
+                {{ADDRESS}} {{CITY}}, {{STATE}} {{ZIP}} <br />
+                <a href="tel:{{PHONE_RAW}}"><u>{{PHONE_READABLE}}</u></a><br />
+            </p>
+        </div>
+        <div class="embed-responsive embed-responsive-4by3" style="width:75%; float:right;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.770102656027!2d-80.18687278418045!3d40.25864027938387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834547e2d2e34d1%3A0xc73e107142cc6e65!2s1+Greenside+Ave%2C+Canonsburg%2C+PA+15317!5e0!3m2!1sen!2sus!4v1485884901113" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+     </div>
+</div>
+{% endautoescape %}
