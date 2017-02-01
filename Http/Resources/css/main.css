@@ -27,7 +27,7 @@ html, body {
 
 body {
     padding-top: 50px;
-    padding-bottom: 57px; 
+    padding-bottom: 40px; 
     overflow: hidden;
     /*background-image: url("/images/background.jpg");
     background-image: url("/images/logo_pattern_3.png");
@@ -42,17 +42,13 @@ body {
     text-align: justify;
 }
 
-.main_sidebar {
-    
-}
-
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   
   /* Set the fixed height of the footer here */
-  height: 57px;
+  height: 40px;
   background-color: #fcfcfc;
   border-color: #eeeeee;
   text-align: center;
