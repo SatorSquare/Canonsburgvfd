@@ -4,16 +4,13 @@ from google.appengine.ext import ndb
 from google.appengine.ext import blobstore
 from google.appengine.ext import deferred
 
-from Models import AccountModel
+from Infrastructure.Models import Models
 
-class AccountBroker:
-  @staticmethod
-  def getAccount(key):
-    return AccountModel.get_by_id(key)
+def getAccount(key):
+    return Models.AccountModel.get_by_id(key)
   
-  @staticmethod
-  def createAccount(user):
-    account = AccountModel(id = user.user_id())
+def createAccount(user):
+    account = Models.AccountModel(id = user.user_id())
     account.email = user.email()
     account.nickname = user.nickname()
     account.put()

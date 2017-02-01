@@ -34,3 +34,4 @@ ROUTE_MAP = {
     '/PhotoGallery': 'pages_/photo_gallery.html',
     '/ContactUs': 'pages_/contact_us.html'
 }
+
