@@ -2,7 +2,7 @@ $(window).load(
     function() {        
         $("#main").mCustomScrollbar({
                 theme:"minimal",
-                scrollInertia: 100
+                scrollInertia: 400
             }
         );
     }
