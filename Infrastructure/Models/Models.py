@@ -11,5 +11,11 @@ class AccountModel(ndb.Model):
 class Photo(ndb.Model):
     create_time = ndb.DateTimeProperty(auto_now_add = True)
     mod_time = ndb.DateTimeProperty(auto_now = True)
-    title = ndb.StringProperty(required = False)
     full_size_image_key = ndb.BlobKeyProperty()
+    title = ndb.StringProperty()
+    filename = ndb.StringProperty()
+    content_type = ndb.StringProperty()
+    creation = ndb.DateTimeProperty()
+    size = ndb.IntegerProperty()
+    md5_hash = ndb.StringProperty()
+    gs_object_name = ndb.StringProperty()

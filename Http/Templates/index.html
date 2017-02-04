@@ -33,7 +33,9 @@
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+    $( document ).ready(function() {setContent('Static/{{PATH}}', 'page_{{PATH}}');});
+    </script>
     {% autoescape true %}
     
     {% include "main_/main_navbar.html" ignore missing %}
@@ -49,11 +51,7 @@
     
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7 col-md-push-3" id="main_container">
-                {% endautoescape %}
-                    {{BODY}}
-                {% autoescape true %}
-            </div>
+            <div class="col-md-7 col-md-push-3" id="main_container"></div>
             <div class="col-md-3 col-md-pull-7 main_sidebar">
                 {% include "main_/main_sidebar_left.html" ignore missing %}
             </div>

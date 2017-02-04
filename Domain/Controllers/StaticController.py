@@ -13,12 +13,7 @@ from Infrastructure.Repositories import AccountRepository
 
 class StaticHandler(webapp2.RequestHandler):    
   def get(self):
-      account = None;
-      user = users.get_current_user()
-      if user:
-        account = AccountRepository.getAccount(user.user_id())
-        if not account:
-            account = AccountRepository.createAccount(user, users.is_current_user_admin())
+      account = AccountRepository.getUserAccount();
                 
       # Inserts the templates for the linked pages
       template_values = {

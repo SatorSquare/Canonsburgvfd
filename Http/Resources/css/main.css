@@ -186,7 +186,8 @@ img.img-thumbnail {
 }
 
 .img_photoGallery {
-    max-width: 24%;
+    width:  5vw; /* 20% of the viewport width */
+    height: 5vw;
 }
 
 a {
@@ -215,5 +216,14 @@ a:hover {
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
     background-color: #791436;
+}
+
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    max-height: 80vh;
+    overflow-y: auto;
 }
 

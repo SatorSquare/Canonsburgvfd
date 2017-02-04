@@ -32,6 +32,9 @@ ROUTE_MAP = {
     '/History': 'pages_/history.html',
     '/Community': 'pages_/community.html',
     '/PhotoGallery': 'pages_/photo_gallery.html',
+    '/PhotoGallery2': 'pages_/photo_gallery2.html',
     '/ContactUs': 'pages_/contact_us.html'
 }
+
+GALLERY_PHOTOS_PER_PAGE = 20
 
