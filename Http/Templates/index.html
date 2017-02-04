@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/vendor/Gallery-2.22.0/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/kartik-v-bootstrap-fileinput/css/fileinput.min.css">
     <link rel="stylesheet" type="text/css" href="/css/social.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <script type="text/javascript" src="/vendor/js/jquery.min.js"></script>
@@ -14,11 +15,16 @@
     <script type="text/javascript" src="/vendor/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/vendor/Gallery-2.22.0/js/blueimp-gallery.min.js"></script>
     <script type="text/javascript" src="/vendor/Gallery-2.22.0/js/jquery.blueimp-gallery.min.js"></script>
+    <script type="text/javascript" src="/vendor/kartik-v-bootstrap-fileinput/js/plugins/canvas-to-blob.min.js"></script>
+    <script type="text/javascript" src="/vendor/kartik-v-bootstrap-fileinput/js/plugins/purify.min.js"></script>
+    <script type="text/javascript" src="/vendor/kartik-v-bootstrap-fileinput/js/plugins/sortable.min.js"></script>
+    <script type="text/javascript" src="/vendor/kartik-v-bootstrap-fileinput/js/fileinput.min.js"></script>
     <script type="text/javascript" src="/js/state_management.js"></script>
     <script type="text/javascript" src="/js/main.js"></script> 
     <title>{{ SITE_NAME }}</title>
   </head>
   <body id="main"><br />
+    {% include "modals_/image_upload_modal.html" ignore missing %}
     <div id="fb-root"></div>
     {% endautoescape %}
     <script>(function(d, s, id) {

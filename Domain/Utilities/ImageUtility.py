@@ -1,19 +1,17 @@
 from google.appengine.api import images
 
-def thumbnailify(photo):
-    if photo:
-        img = images.Image(photo)
-        img.resize(width=80, height=100)
+def thumbnailify(blob_key):
+    if blob_key:
+        img = img = images.Image(blob_key=blob_key)
+        img.resize(width=250, height=250)
         img.im_feeling_lucky()
-        thumbnail = img.execute_transforms(output_encoding=images.JPEG)
         
-        self.response.headers['Content-Type'] = 'image/jpeg'
-        self.response.out.write(thumbnail)
-        return thumbnail
+        return img.execute_transforms(output_encoding=images.JPEG)
         
-def adjustContrast(photo):
-    if photo:
-        img = images.Image(photo)
+def adjustContrast(blob_key):
+    if blob_key:
+        img = images.Image(blob_key=blob_key)
         img.im_feeling_lucky()
+        
         return img.execute_transforms(output_encoding=images.JPEG)
     

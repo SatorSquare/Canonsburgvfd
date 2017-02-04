@@ -23,6 +23,7 @@ app = webapp2.WSGIApplication([
     ('/Static/Community', StaticController.StaticHandler),
     ('/Static/PhotoGallery', StaticController.StaticHandler),
     ('/Static/ContactUs', StaticController.StaticHandler),
-    ('/Thumbnail', PhotoController.ThumbnailHandler),
-    ('/Photo', PhotoController.PhotoHandler)
+    ('/Thumbnail/([^/]+)?', PhotoController.ThumbnailHandler),
+    ('/Photo/([^/]+)?', PhotoController.PhotoHandler),
+    ('/UploadPhoto', PhotoController.PhotoUploadHandler)
   ], debug=False)
