@@ -34,16 +34,6 @@ handlers:
   secure: always
   login: admin
 
-- url: /PhotoGallery2
-  script: main.app
-  secure: always
-  login: admin
-  
-- url: /Static/PhotoGallery2
-  script: main.app
-  secure: always
-  login: admin
-
 - url: / 
   script: main.app 
   secure: always 

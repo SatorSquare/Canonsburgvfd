@@ -29,11 +29,15 @@
        
        <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Members <span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% if ACCOUNT %} {{ACCOUNT.nickname}} ({{ACCOUNT.email}}) {% else %} Members {% endif %} <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <li><a href="http://mail.canonsburgvfd.org" target="_blank">Webmail</a></li>
-            <li role="separator" class="divider" style="display:none;"></li>
-            <li style="display:none;">
+            <li role="separator" class="divider"></li>
+            {% if ACCOUNT.admin %}
+                <li><a href="#" data-toggle="modal" data-target="#ImageUploadModal">Photo Gallery Image Upload</a></li>
+                <li role="separator" class="divider"></li>
+            {% endif %}
+            <li>
                 {% if ACCOUNT %}
                     <a href="{{LOGOUT_URL}}">Sign out</a>
                 {% else %}

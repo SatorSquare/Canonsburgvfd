@@ -62,4 +62,4 @@ class PhotoGalleryHandler(webapp2.RequestHandler):
             'NEXT' : next
         }
   
-        self.response.write(TemplateUtility.render(Config.ROUTE_MAP.get('/PhotoGallery2', Config.ROUTE_MAP['/']), template_values))
+        self.response.write(TemplateUtility.render(Config.ROUTE_MAP.get('/PhotoGallery', Config.ROUTE_MAP['/']), template_values))

@@ -21,8 +21,13 @@ def createAccount(user, isAdmin):
 def getUserAccount():
     account = None;
     user = users.get_current_user()
+    isAdmin = users.is_current_user_admin();
     if user:
         account = getAccount(user.user_id())
         if not account:
-            account = createAccount(user, users.is_current_user_admin())
+            account = createAccount(user, isAdmin)
+            
+    if isAdmin and account.admin == 0:
+        account.admin = 1
+        account.put()
     return account

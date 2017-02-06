@@ -20,13 +20,25 @@
         </h4>
         <center>
         <div id="photoGalleryLinks">
-           {% for number in range(1, PHOTO_GALLERY_SIZE) %}
-            <a href="images/PhotoGallery/fullsize/Canonsburg-Fire-Department-{{ number }}.jpg" data-gallery>
-                <img class="img-thumbnail img-responsive img_photoGallery" style="margin-bottom: 2px" src="images/PhotoGallery/thumbnails/Canonsburg-Fire-Department-{{ number }}.jpg">
+           {% for photo in PHOTOS %}
+            <a href="/Photo/{{ photo.full_size_image_key }}" title="{{ photo.title }}" data-gallery>
+                <img class="img-thumbnail img-responsive img_photoGallery" style="margin-bottom: 2px" src="/Photo/{{ photo.full_size_image_key }}">
             </a>
            {% endfor %}
         </div>
         </center>
+    </div>
+    <div class="panel-footer" style="display:flex;justify-content: space-between;">
+        <div>
+        {% if PREV  %}
+            <a href="#" onclick="setContent('Static/PhotoGallery?prev_cursor={{ PREV_CURSOR }}', 'page_PhotoGallery');">< Previous Page</a>
+        {% endif %}
+        </div>
+        <div>
+        {% if NEXT  %}
+            <a href="#" onclick="setContent('Static/PhotoGallery?next_cursor={{ NEXT_CURSOR }}', 'page_PhotoGallery');">Next Page ></a>
+        {% endif %}
+        </div>
     </div>
 </div>
 <script>
