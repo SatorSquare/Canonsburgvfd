@@ -1,0 +1,25 @@
+ <div class="panel-heading">
+    {% if ACCOUNT.admin == 1 %}
+        <button style="margin-top: 6px;float:right;padding: 2px 5px;margin-right: 4px;" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#UpdatesModal">Add</button>
+    {% endif %}
+    <h3 class="panel-title">Updates</h3>
+ </div>
+ <div class="panel-body">
+ {% set heading = "" %}
+ {% for UPDATE in UPDATES %}
+    {% if UPDATE.heading != heading  %}
+        <h4 class="mc_subhead_2 mc_redvariant">{{ UPDATE.heading }}</h4>
+        {% set heading = UPDATE.heading %}
+    {% endif %}
+    <h4 class="mc_subhead_1">{{ UPDATE.title }}</h4>
+    <p>
+        {{ UPDATE.text }}
+    </p>
+    {% if ACCOUNT.admin == 1 %}
+    <div style="text-align: right;">
+        <button style="" type="button" class="btn btn-primary btn-sm" onclick='configureEditModal("{{UPDATE.key.urlsafe()}}", "{{UPDATE.title|e}}", "{{UPDATE.text|e}}")'>Edit</button>
+        <button style="" type="button" class="btn btn-primary btn-sm" onclick='deleteUpdate("{{UPDATE.key.urlsafe()}}")'>Delete</button>
+    </div>
+    {% endif %}
+    <br />
+ {% endfor %}

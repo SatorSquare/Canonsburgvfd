@@ -43,7 +43,7 @@ class PhotoUploadHandler(blobstore_handlers.BlobstoreUploadHandler):
         upload = self.get_uploads()[0]
         fileInfo = self.get_file_infos()[0]
         result = PhotoRepository.uploadPhoto(upload, fileInfo)
-        self.response.out.write(json.encode({}));
+        self.response.out.write(json.encode({}))
         
 class PhotoGalleryHandler(webapp2.RequestHandler):
     """Handles requests like /PhotoGallery?page=1234567."""   

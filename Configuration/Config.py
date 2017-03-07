@@ -30,8 +30,10 @@ ROUTE_MAP = {
     '/History': 'pages_/history.html',
     '/Community': 'pages_/community.html',
     '/PhotoGallery': 'pages_/photo_gallery.html',
-    '/ContactUs': 'pages_/contact_us.html'
+    '/ContactUs': 'pages_/contact_us.html',
+    '/Updates': 'main_/main_updates.html'
 }
 
 GALLERY_PHOTOS_PER_PAGE = 40
+UPDATES_PER_PAGE = 15
 

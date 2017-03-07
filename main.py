@@ -3,6 +3,7 @@ import webapp2
 from Domain.Controllers import MainController
 from Domain.Controllers import StaticController
 from Domain.Controllers import PhotoController
+from Domain.Controllers import UpdateController
 
 app = webapp2.WSGIApplication([
     ('/', MainController.MainHandler),
@@ -25,5 +26,7 @@ app = webapp2.WSGIApplication([
     ('/Static/ContactUs', StaticController.StaticHandler),
     ('/Thumbnail/([^/]+)?', PhotoController.ThumbnailHandler),
     ('/Photo/([^/]+)?', PhotoController.PhotoHandler),
-    ('/UploadPhoto', PhotoController.PhotoUploadHandler)
+    ('/UploadPhoto', PhotoController.PhotoUploadHandler),
+    ('/Updates', UpdateController.UpdateHandler),
+    ('/DeleteUpdates', UpdateController.DeleteUpdateHandler)
   ], debug=False)

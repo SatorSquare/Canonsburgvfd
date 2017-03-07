@@ -8,6 +8,14 @@ class AccountModel(ndb.Model):
     admin = ndb.IntegerProperty(default = 0)
     avatar = ndb.BlobProperty()
 
+class Update(ndb.Model):
+    create_time = ndb.DateTimeProperty(auto_now_add = True)
+    mod_time = ndb.DateTimeProperty(auto_now = True)
+    author = ndb.StringProperty(required = True)
+    heading = ndb.StringProperty(required = True)
+    title = ndb.StringProperty()
+    text = ndb.TextProperty()
+
 class Photo(ndb.Model):
     create_time = ndb.DateTimeProperty(auto_now_add = True)
     mod_time = ndb.DateTimeProperty(auto_now = True)

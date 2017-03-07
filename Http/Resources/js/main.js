@@ -5,6 +5,12 @@ $(window).load(
                 scrollInertia: 400
             }
         );
+        
+        $.get( "/Updates", 
+            function( data ) {         
+                $("#updatesSection").html( data );
+            }
+        ); 
     }
 );
  
