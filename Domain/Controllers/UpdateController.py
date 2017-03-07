@@ -20,6 +20,9 @@ class DeleteUpdateHandler(webapp2.RequestHandler):
 class UpdateHandler(webapp2.RequestHandler):
     def post(self):
         account = AccountRepository.getUserAccount();
+        if account.admin == 0:
+            return false
+            
         id = self.request.get("id")
         title = self.request.get("title")
         text = self.request.get("text")

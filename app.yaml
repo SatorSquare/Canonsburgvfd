@@ -32,6 +32,9 @@ handlers:
 - url: /UploadPhoto
   script: main.app
   login: admin
+- url: /DeleteUpdates
+  script: main.app
+  login: admin
 
 - url: / 
   script: main.app 
