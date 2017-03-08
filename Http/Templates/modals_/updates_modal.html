@@ -2,7 +2,7 @@
 <div id="UpdatesModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content" style="width:55em;">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Add Update</h4>
@@ -17,7 +17,7 @@
         <div>
           <br />
           <label for="update_text" class="col-form-label">Text:</label>
-          <textarea rows="4" cols="50" class="form-control" type="text" id="update_text"></textarea>
+          <textarea rows="10" class="form-control markItUp" type="text" id="update_text"></textarea>
         </div>
       </div>
       </div>
@@ -28,3 +28,27 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript" >
+   $(document).ready(function() {
+      $(".markItUp").markItUp({
+        	onShiftEnter:  	{keepDefault:false, replaceWith:'<br />\n'},
+        	onCtrlEnter:  	{keepDefault:false, openWith:'\n<p>', closeWith:'</p>'},
+        	onTab:    		{keepDefault:false, replaceWith:'    '},
+        	markupSet:  [ 	
+        		{name:'Bold', key:'B', openWith:'(!(<strong>|!|<b>)!)', closeWith:'(!(</strong>|!|</b>)!)' },
+        		{name:'Italic', key:'I', openWith:'(!(<em>|!|<i>)!)', closeWith:'(!(</em>|!|</i>)!)'  },
+        		{name:'Stroke through', key:'S', openWith:'<del>', closeWith:'</del>' },
+        		{separator:'---------------' },
+        		{name:'Bulleted List', openWith:'    <li>', closeWith:'</li>', multiline:true, openBlockWith:'<ul>\n', closeBlockWith:'\n</ul>'},
+        		{name:'Numeric List', openWith:'    <li>', closeWith:'</li>', multiline:true, openBlockWith:'<ol>\n', closeBlockWith:'\n</ol>'},
+        		{separator:'---------------' },
+        		{name:'Picture', key:'P', replaceWith:'<img src="[![Source:!:http://]!]" alt="[![Alternative text]!]" />' },
+        		{name:'Link', key:'L', openWith:'<a href="[![Link:!:http://]!]"(!( title="[![Title]!]")!)>', closeWith:'</a>', placeHolder:'Your text to link...' },
+        		{separator:'---------------' },
+        		{name:'Clean', className:'clean', replaceWith:function(markitup) { return markitup.selection.replace(/<(.*?)>/g, "") } },		
+        		{name:'Preview', className:'preview',  call:'preview'}
+        	]
+        });
+   });
+</script>
