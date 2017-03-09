@@ -22,10 +22,13 @@ function saveUpdate() {
     $("#update_text").val("");
 }
 
-function configureEditModal(id, title, text) {
+function configureEditModal(id) {
+    var title = $("h4#" + id).html();
+    var text = $("p#" + id).html();
+    
     $("#update_key").val(id);
-    $("#update_title").val(title);
-    $("#update_text").val(text);
+    $("#update_title").val(title.trim());
+    $("#update_text").val(text.trim());
     $("#UpdatesModal").modal();
 }
 
