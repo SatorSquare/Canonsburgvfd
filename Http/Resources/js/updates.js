@@ -24,7 +24,7 @@ function saveUpdate() {
 
 function configureEditModal(id) {
     var title = $("h4#" + id).html();
-    var text = $("p#" + id).html();
+    var text = $("div#" + id).html();
     
     $("#update_key").val(id);
     $("#update_title").val(title.trim());
